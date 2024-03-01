@@ -16,3 +16,12 @@ from tensorflow.keras.metrics import Precision, Recall, BinaryAccuracy
 warnings.filterwarnings('ignore') 
 
 
+# Extracting the compressed dataset
+from zipfile import ZipFile 
+data_path = 'Img.zip'
+
+with ZipFile(data_path,'r') as zip:
+    zip.extractall()
+    print('The data set has been extracted.')
+
+
